@@ -160,7 +160,6 @@ export const BookingDetailPage = () => {
           )}
         </CardContent>
       </Card>
-
       <ConfirmDialog
         open={rejectDialogOpen}
         onOpenChange={setRejectDialogOpen}

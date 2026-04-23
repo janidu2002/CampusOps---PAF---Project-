@@ -178,7 +178,6 @@ export const UsersPage = () => {
           </Dialog>
         }
       />
-
       <Card>
         <CardHeader>
           <CardTitle>All Users</CardTitle>
