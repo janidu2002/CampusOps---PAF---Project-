@@ -185,3 +185,4 @@ export const TicketsPage = () => {
     </div>
   );
 };
+
