@@ -1,14 +1,14 @@
 package com.smartcampus.security;
 
-import com.smartcampus.model.entity.User;
-import com.smartcampus.model.enums.Role;
-import com.smartcampus.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Map;
+import com.smartcampus.model.entity.User;
+import com.smartcampus.model.enums.Role;
+import com.smartcampus.repository.UserRepository;
+
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -45,3 +45,4 @@ public class OAuth2UserService {
         return user;
     }
 }
+
