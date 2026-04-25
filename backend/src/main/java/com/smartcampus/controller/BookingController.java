@@ -1,22 +1,31 @@
 package com.smartcampus.controller;
 
-import com.smartcampus.model.dto.ApiResponse;
-import com.smartcampus.model.dto.request.BookingRequestDTO;
-import com.smartcampus.model.dto.response.BookingResponseDTO;
-import com.smartcampus.model.enums.BookingStatus;
-import com.smartcampus.service.BookingService;
-import com.smartcampus.service.UserService;
-import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
+import java.time.LocalDate;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
+import com.smartcampus.model.dto.ApiResponse;
+import com.smartcampus.model.dto.request.BookingRequestDTO;
+import com.smartcampus.model.dto.response.BookingResponseDTO;
+import com.smartcampus.model.enums.BookingStatus;
+import com.smartcampus.service.BookingService;
+import com.smartcampus.service.UserService;
+
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/bookings")
@@ -84,3 +93,4 @@ public class BookingController {
         return ApiResponse.success(bookingService.cancelBooking(id, userDetails.getUsername()), "Booking cancelled successfully");
     }
 }
+
