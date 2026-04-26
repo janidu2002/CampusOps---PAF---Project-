@@ -8,3 +8,4 @@ export const bookingApi = {
   reject: (id, rejectionReason) => axios.patch(`/bookings/${id}/reject`, null, { params: { rejectionReason } }),
   cancel: (id) => axios.patch(`/bookings/${id}/cancel`),
 };
+

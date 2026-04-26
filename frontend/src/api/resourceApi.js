@@ -7,3 +7,4 @@ export const resourceApi = {
   update: (id, data) => axios.put(`/resources/${id}`, data),
   delete: (id) => axios.delete(`/resources/${id}`),
 };
+
