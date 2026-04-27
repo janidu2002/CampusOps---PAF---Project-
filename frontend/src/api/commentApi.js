@@ -6,3 +6,4 @@ export const commentApi = {
   update: (ticketId, id, data) => axios.put(`/tickets/${ticketId}/comments/${id}`, data),
   delete: (ticketId, id) => axios.delete(`/tickets/${ticketId}/comments/${id}`),
 };
+
