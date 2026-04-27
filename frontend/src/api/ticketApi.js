@@ -10,3 +10,4 @@ export const ticketApi = {
   assign: (id, technicianId) => axios.patch(`/tickets/${id}/assign`, null, { params: { technicianId } }),
   delete: (id) => axios.delete(`/tickets/${id}`),
 };
+
